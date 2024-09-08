@@ -31,10 +31,11 @@
         }
         .post-it-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 30px;
             position: relative;
-            height: 140px;
+            min-height: 140px;
         }
         .post-it {
             background-color: #ffff88;
@@ -43,9 +44,7 @@
             width: 60%;
             transform: rotate(-2deg);
             box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-            position: absolute;
-            left: 0;
-            bottom: 0;
+            position: relative;
             z-index: 1;
         }
         .blog-link-postit {
@@ -54,9 +53,6 @@
             padding: 15px;
             width: 200px;
             height: 100px;
-            position: absolute;
-            right: 0;
-            top: 0;
             transform: rotate(5deg);
             box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
             transition: transform 0.3s ease;
@@ -126,18 +122,26 @@
             text-decoration: underline;
         }
         @media (max-width: 600px) {
+            .desk {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
             .post-it-container {
-                height: 220px;
                 flex-direction: column;
                 align-items: center;
+                min-height: auto;
             }
             .post-it, .blog-link-postit {
-                position: relative;
-                width: 80%;
-                margin-bottom: 10px;
+                width: 90%;
+                margin-bottom: 15px;
+                transform: none;
             }
             .blog-link-postit {
-                order: -1;
+                height: auto;
+                padding: 10px;
             }
         }
     </style>
@@ -147,12 +151,12 @@
         <h1>My Personal Model Picks</h1>
         
         <div class="post-it-container">
-            <div class="post-it">
-                <strong>TLDR:</strong> A curated showcase of small, on-premise models with great utility, enabling privacy-centered deployment and easy adaptation to bio-inspired use cases.
-            </div>
             <div class="blog-link-postit">
                 <p>Check out the Blogs</p>
                 <a href="https://amanpriyanshu.github.io/blogs/">Click here!</a>
+            </div>
+            <div class="post-it">
+                <strong>TLDR:</strong> A curated showcase of small, on-premise models with great utility, enabling privacy-centered deployment and easy adaptation to bio-inspired use cases.
             </div>
         </div>
         
